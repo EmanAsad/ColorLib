@@ -17,16 +17,20 @@ const NavigationBar = () => {
 
   const MenuItem = ({ title, badge, path }) => (
     <div className="relative group">
-      <Link to={path} className="px-4 py-3 text-base md:text-lg font-medium text-black lg:text-white hover:text-orange-500">
+      <Link
+        to={path}
+        className="px-4 py-3 text-base md:text-lg font-medium lg:text-black hover:text-orange-500"
+      >
         {title}
       </Link>
       {badge && (
-        <span className="absolute top-[-8px] right-[-6px] px-2 py-1 text-xs font-bold text-white bg-orange-600 rounded-full">
+        <span className="absolute top-[-8px] right-[-6px] px-2 py-1 text-xs font-bold text-black bg-orange-600 rounded-full">
           {badge}
         </span>
       )}
     </div>
   );
+  
 
   const Dropdown = ({ title, children, icon }) => {
     const [isOpen, setIsOpen] = useState(false);
